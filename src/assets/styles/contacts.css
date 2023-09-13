@@ -1,0 +1,8 @@
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  /* Define styles for the contact form and its elements here */
+  
