@@ -2,15 +2,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg-primary: #ffffff;
-  --color-bg-secondary: #f0fdfa;
-  --color-bg-card: #ffffff;
-  --color-border: #ccfbf1;
-  --color-border-hover: #5eead4;
-  --color-text-primary: #0f172a;
-  --color-text-secondary: #475569;
-  --color-accent: #06b6d4;
-  --color-accent-light: #22d3ee;
+  --color-bg-primary: var(--app-bg-primary);
+  --color-bg-secondary: var(--app-bg-secondary);
+  --color-bg-card: var(--app-bg-card);
+  --color-border: var(--app-border);
+  --color-border-hover: var(--app-border-hover);
+  --color-text-primary: var(--app-text-primary);
+  --color-text-secondary: var(--app-text-secondary);
+  --color-accent: var(--app-accent);
+  --color-accent-light: var(--app-accent-light);
   
   --font-sans: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
@@ -18,11 +18,33 @@
 
 @layer base {
   :root {
+    --app-bg-primary: #ffffff;
+    --app-bg-secondary: #f0fdfa;
+    --app-bg-card: #ffffff;
+    --app-border: #ccfbf1;
+    --app-border-hover: #5eead4;
+    --app-text-primary: #0f172a;
+    --app-text-secondary: #475569;
+    --app-accent: #06b6d4;
+    --app-accent-light: #22d3ee;
     --accent-glow: rgba(6, 182, 212, 0.15);
+  }
+
+  .dark {
+    --app-bg-primary: #0f172a;
+    --app-bg-secondary: #020617;
+    --app-bg-card: #1e293b;
+    --app-border: #334155;
+    --app-border-hover: #38bdf8;
+    --app-text-primary: #f8fafc;
+    --app-text-secondary: #94a3b8;
+    --app-accent: #38bdf8;
+    --app-accent-light: #7dd3fc;
+    --accent-glow: rgba(56, 189, 248, 0.15);
   }
   
   html, body {
-    @apply bg-[var(--color-bg-primary)] text-[var(--color-text-primary)] font-sans antialiased;
+    @apply bg-[var(--color-bg-primary)] text-[var(--color-text-primary)] font-sans antialiased transition-colors duration-300;
     scroll-behavior: smooth;
   }
 }

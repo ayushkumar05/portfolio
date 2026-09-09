@@ -6,21 +6,45 @@ const experiences = [
         company: "JPMorgan Chase & Co.",
         date: "Jul 2024 – Present",
         bullets: [
-            "Architected the consolidation of multiple legacy monoliths into a unified React/TypeScript micro-frontend platform, accelerating deployment cycles by 40%.",
-            "Designed high-throughput Java/Spring Boot REST APIs handling 10K+ RPM, implementing strict optimistic concurrency controls (ETags) to eliminate data collisions.",
-            "Implemented the Transactional Outbox pattern across Oracle database schemas, guaranteeing at-least-once event delivery for quarterly risk ingestion.",
-            "Modernized a React-based UI and improved WCAG accessibility compliance, increasing accessibility scores by 25% and CSAT from 75% to 93%.",
-            "Led the convergence of disparate AWS EKS and ECS deployment pipelines into a single CI/CD workflow, reducing production release times from days to under 3 hours.",
-            "Engineered an asynchronous, event-driven AI application utilizing a RAG pipeline to automate complex audit queries, saving ~3 weeks per quarter."
+            "Developed an application to streamline audit query resolution, reducing developer workload by 5% each quarter using a RAG pipeline for query generation and execution.",
+            "Maintain and enhance an internal application for user access management, improving system functionality and handling access collisions efficiently.",
+            "Created an internal application with a user-friendly interface for reading and editing complex XML data using Spring Boot and React."
         ]
     },
     {
-        role: "Software Engineering Intern",
+        role: "Attachment Intern",
         company: "JPMorgan Chase & Co.",
-        date: "Jun 2023 – Jun 2024",
+        date: "Jan 2024 – Jun 2024",
         bullets: [
-            "Built a scalable role-based access chatbot using sentence transformer embeddings, serving 50K+ concurrent users and reducing manual IT escalation tickets by 60%.",
-            "Developed a distributed financial instruments service to process 10K+ daily trades, introducing a Redis caching layer to offload database reads and meet a strict 99.9% availability SLA."
+            "Developed a chatbot using RAG pipelines to provide support for an internal application managing role-based access control.",
+            "Facilitated technical queries for the development team and functional queries for the product team."
+        ]
+    },
+    {
+        role: "Summer Intern",
+        company: "JPMorgan Chase & Co.",
+        date: "Jun 2023 – Jul 2023",
+        bullets: [
+            "Developed a highly scalable and complex application for a Financial Instruments Project.",
+            "Implemented a flexible dynamic form component using React and Material-UI to handle various requirements along with Spring Boot API endpoints."
+        ]
+    },
+    {
+        role: "Product Developer Intern",
+        company: "Speak Your Mind Education LLP",
+        date: "Jan 2023 – Apr 2023",
+        bullets: [
+            "Built an MVP for an innovative EdTech Platform featuring face-recognition attendance, live streaming, and a doubt-resolution chatbot.",
+            "Guided and managed a team of web development interns."
+        ]
+    },
+    {
+        role: "Web Developer Intern",
+        company: "Appan Pyropark",
+        date: "Aug 2022 – Oct 2022",
+        bullets: [
+            "Led a team in developing a full-stack e-commerce web application.",
+            "Utilized Flask, vanilla HTML/CSS, and MongoDB."
         ]
     }
 ];
