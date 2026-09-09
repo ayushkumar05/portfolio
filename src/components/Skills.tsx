@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import ParticleField from './ParticleField';
 
 const skillsData = [
     {
@@ -22,8 +21,7 @@ const skillsData = [
 
 export default function Skills() {
     return (
-        <section id="skills" className="py-24 bg-teal-50/50 relative overflow-hidden">
-            <ParticleField />
+        <section id="skills" className="py-24 bg-bg-secondary/40 relative overflow-hidden">
 
             <div className="relative z-10 max-w-4xl mx-auto px-6">
                 <motion.div

@@ -51,7 +51,7 @@ const experiences = [
 
 export default function Experience() {
     return (
-        <section id="experience" className="py-24 bg-bg-secondary relative">
+        <section id="experience" className="py-24 bg-bg-secondary/40 relative">
             <div className="max-w-4xl mx-auto px-6">
                 <motion.div
                     initial={{ y: 20, opacity: 0 }}
@@ -76,8 +76,8 @@ export default function Experience() {
                         >
                             <div className="absolute -left-[41px] md:-left-[57px] top-6 w-4 h-4 bg-accent rounded-full ring-4 ring-teal-50"></div>
 
-                            <div className="bg-bg-card border border-teal-100 rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow">
-                                <span className="inline-block font-mono text-sm font-medium text-cyan-600 mb-2">{exp.date}</span>
+                            <div className="bg-bg-card/80 backdrop-blur-sm border border-border rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow">
+                                <span className="inline-block font-mono text-sm font-medium text-accent mb-2">{exp.date}</span>
                                 <h3 className="text-xl font-semibold text-text-primary mb-1">{exp.role}</h3>
                                 <h4 className="text-base text-text-secondary mb-4">{exp.company}</h4>
                                 <ul className="space-y-2">

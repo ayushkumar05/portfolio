@@ -37,7 +37,7 @@ export default function Projects() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
                             whileHover={{ y: -6 }}
-                            className="bg-bg-card border border-teal-100 rounded-2xl p-8 hover:border-accent hover:shadow-lg hover:shadow-cyan-500/10 transition-all duration-200 group flex flex-col h-full"
+                            className="bg-bg-card/80 backdrop-blur-sm border border-border rounded-2xl p-8 hover:border-accent hover:shadow-lg hover:shadow-accent-glow transition-all duration-200 group flex flex-col h-full"
                         >
                             <h3 className="text-xl font-semibold text-text-primary mb-3">{project.title}</h3>
                             <p className="text-text-secondary text-sm md:text-base flex-grow mb-6">{project.description}</p>
