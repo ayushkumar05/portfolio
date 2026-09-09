@@ -37,17 +37,22 @@ export default function Background3D() {
 
     const initParticles = () => {
       particles.length = 0;
+      const w = window.innerWidth;
       const h = window.innerHeight;
+      const isMobile = w < 768;
+      const count = isMobile ? 30 : particleCount;
 
-      // Create two helixes: one on the right (0.78), one on the left (0.22)
-      const helixConfigs = [
-        { centerXRatio: 0.80, helixId: 0 },
-        { centerXRatio: 0.18, helixId: 1 },
-      ];
+      // On mobile: single centered helix. On desktop: two helixes flanking content
+      const helixConfigs = isMobile
+        ? [{ centerXRatio: 0.5, helixId: 0 }]
+        : [
+            { centerXRatio: 0.80, helixId: 0 },
+            { centerXRatio: 0.18, helixId: 1 },
+          ];
 
       for (const config of helixConfigs) {
-        for (let i = 0; i < particleCount; i++) {
-          const t = i / particleCount;
+        for (let i = 0; i < count; i++) {
+          const t = i / count;
           const yPos = t * h * 2 - h * 0.5;
           const angle = t * Math.PI * 6;
 
@@ -57,7 +62,7 @@ export default function Background3D() {
             baseY: yPos,
             angle: angle,
             speed: 0.003 + Math.random() * 0.004,
-            radius: 2.5 + Math.random() * 3,
+            radius: isMobile ? 2 + Math.random() * 2 : 2.5 + Math.random() * 3,
             opacity: 0.2 + Math.random() * 0.3,
             strand: 0,
             helix: config.helixId,
@@ -68,7 +73,7 @@ export default function Background3D() {
             baseY: yPos,
             angle: angle + Math.PI,
             speed: 0.003 + Math.random() * 0.004,
-            radius: 2.5 + Math.random() * 3,
+            radius: isMobile ? 2 + Math.random() * 2 : 2.5 + Math.random() * 3,
             opacity: 0.2 + Math.random() * 0.3,
             strand: 1,
             helix: config.helixId,
@@ -90,12 +95,15 @@ export default function Background3D() {
       const timeS = time * 0.001;
 
       const isDark = document.documentElement.classList.contains('dark');
-      const color1 = isDark ? '102, 163, 191' : '51, 104, 160';   // #66A3BF or #3368A0
-      const color2 = isDark ? '200, 223, 219' : '102, 163, 191';  // #C8DFDB or #66A3BF
-      const linkColor = isDark ? '200, 223, 219' : '200, 223, 219'; // #C8DFDB
+      const color1 = isDark ? '102, 163, 191' : '20, 60, 100';    // lighter navy
+      const color2 = isDark ? '200, 223, 219' : '35, 85, 135';    // lighter blue
+      const linkColor = isDark ? '200, 223, 219' : '35, 85, 135'; // lighter links
 
-      const helixCenters = [w * 0.80, w * 0.18];
-      const helixRadii = [70 + Math.min(w * 0.04, 50), 60 + Math.min(w * 0.03, 40)];
+      const isMobile = w < 768;
+      const helixCenters = isMobile ? [w * 0.5] : [w * 0.80, w * 0.18];
+      const helixRadii = isMobile
+        ? [40 + Math.min(w * 0.06, 30)]
+        : [70 + Math.min(w * 0.04, 50), 60 + Math.min(w * 0.03, 40)];
 
       // Update positions
       for (const p of particles) {
@@ -120,8 +128,8 @@ export default function Background3D() {
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
           ctx.lineTo(b.x, b.y);
-          ctx.strokeStyle = `rgba(${linkColor}, 0.06)`;
-          ctx.lineWidth = 1;
+          ctx.strokeStyle = `rgba(${linkColor}, ${isDark ? 0.06 : 0.20})`;
+          ctx.lineWidth = isDark ? 1 : 1.5;
           ctx.stroke();
         }
       }
@@ -148,8 +156,8 @@ export default function Background3D() {
             ctx.quadraticCurveTo(prev.x, prev.y, cpx, cpy);
           }
           const strandColor = strand === 0 ? color1 : color2;
-          ctx.strokeStyle = `rgba(${strandColor}, 0.15)`;
-          ctx.lineWidth = 1.5;
+          ctx.strokeStyle = `rgba(${strandColor}, ${isDark ? 0.15 : 0.28})`;
+          ctx.lineWidth = isDark ? 1.5 : 2;
           ctx.stroke();
         }
       }
@@ -160,7 +168,7 @@ export default function Background3D() {
         const color = p.strand === 0 ? color1 : color2;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${color}, ${p.opacity})`;
+        ctx.fillStyle = `rgba(${color}, ${isDark ? p.opacity : p.opacity * 1.6})`;
         ctx.fill();
       }
 

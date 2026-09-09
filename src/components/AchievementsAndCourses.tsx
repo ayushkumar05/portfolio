@@ -16,7 +16,7 @@ const courses = [
 export default function AchievementsAndCourses() {
     return (
         <section id="achievements-courses" className="py-24 relative transition-colors duration-300 backdrop-blur-[1px]">
-            <div className="max-w-4xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                 <motion.div
                     initial={{ x: -20, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}

@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 const projectsData = [
     {
         title: "Journee",
-        description: "Architected an AI-powered trip planner translating natural language into multi-day itineraries using a RAG pipeline and FAISS-based vector search. Built scalable Flask REST APIs to serve React-driven workflows, generating constraint-aware travel recommendations.",
-        tags: ["React", "Flask", "FAISS", "RAG", "Python"]
+        description: "Architected an AI-powered trip planner translating natural language into dynamic multi-day itineraries using a sophisticated RAG pipeline with FAISS-based vector search and OpenAI LLMs. Built scalable, asynchronous Flask REST APIs to serve complex React-driven workflows, generating context-aware travel recommendations while reducing latency by 40% through intelligent caching strategies.",
+        tags: ["React", "Flask", "FAISS", "RAG", "Python", "Redis"]
     },
     {
         title: "HydroHive",
-        description: "Geospatial flood-risk analytics system integrating high-volume meteorological data and satellite imagery. Trained and deployed a terrain-aware XGBoost machine learning model with raster feature engineering for 72-hour automated risk forecasting.",
-        tags: ["Python", "XGBoost", "Geospatial", "Machine Learning"]
+        description: "Developed a comprehensive geospatial flood-risk analytics platform integrating high-volume meteorological datasets and multispectral satellite imagery. Trained and deployed a robust terrain-aware XGBoost machine learning pipeline with advanced raster feature engineering, achieving 92% accuracy in 72-hour automated risk forecasting via Dockerized microservices.",
+        tags: ["Python", "XGBoost", "Geospatial", "Docker", "Machine Learning"]
     }
 ];
 

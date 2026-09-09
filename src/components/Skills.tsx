@@ -2,20 +2,20 @@ import { motion } from 'framer-motion';
 
 const skillsData = [
     {
-        category: "Languages",
-        items: ["Python", "Java", "TypeScript", "JavaScript", "SQL", "C/C++", "Solidity"]
+        category: "Frontend Architecture",
+        items: ["React 18", "TypeScript", "Micro-frontends", "Zustand", "TanStack Query", "Tailwind CSS", "JavaScript"]
     },
     {
-        category: "Backend & Databases",
-        items: ["Spring Boot", "Node.js", "Flask", "Oracle", "PostgreSQL", "Redis", "Kafka"]
+        category: "Backend & Distributed Systems",
+        items: ["Spring Boot", "Java", "Python", "Apache Kafka", "Redis", "PostgreSQL", "Flask", "REST APIs", "MongoDB"]
     },
     {
-        category: "Frontend",
-        items: ["React", "Redux", "Material-UI", "WebRTC", "Salt Design System"]
+        category: "AI Infrastructure & Search",
+        items: ["RAG Pipelines", "LangChain", "Vector Databases", "Semantic Search", "LLM Orchestration", "Python"]
     },
     {
-        category: "Architecture & Cloud",
-        items: ["Distributed Systems", "Microservices", "Event-Driven", "REST APIs", "AWS (EKS, ECS)", "Docker", "Kubernetes", "CI/CD"]
+        category: "Cloud, DevOps & Quality",
+        items: ["Docker", "Kubernetes", "AWS", "CI/CD", "GitHub Actions", "JUnit", "WebRTC"]
     }
 ];
 
