@@ -15,7 +15,7 @@ const educationData = [
 
 export default function Education() {
     return (
-        <section id="education" className="py-24 bg-bg-secondary relative transition-colors duration-300 backdrop-blur-[1px]">
+        <section id="education" className="py-20 bg-bg-secondary relative transition-colors duration-300 backdrop-blur-[1px] border-t border-border/40">
             <div className="max-w-4xl mx-auto px-6">
                 <motion.div
                     initial={{ y: 20, opacity: 0 }}
@@ -24,8 +24,12 @@ export default function Education() {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                     className="mb-12"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">Education</h2>
-                    <div className="w-16 h-1 bg-accent rounded-full"></div>
+                    <span className="font-mono text-xs uppercase tracking-wider text-accent font-semibold block mb-2">Academic Foundation</span>
+                    <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-3">Education</h2>
+                    <div className="w-16 h-1 bg-accent rounded-full mb-4"></div>
+                    <p className="text-text-muted text-base md:text-lg max-w-2xl">
+                        Degree and foundational background in Computer Science &amp; Engineering.
+                    </p>
                 </motion.div>
 
                 <div className="space-y-6">

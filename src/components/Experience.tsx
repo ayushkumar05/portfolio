@@ -45,7 +45,7 @@ const experiences = [
 
 export default function Experience() {
     return (
-        <section id="experience" className="py-24 bg-bg-secondary relative transition-colors duration-300 backdrop-blur-[1px]">
+        <section id="experience" className="py-24 relative transition-colors duration-300 backdrop-blur-[1px]">
             <div className="max-w-4xl mx-auto px-6">
                 <motion.div
                     initial={{ y: 20, opacity: 0 }}
@@ -54,8 +54,12 @@ export default function Experience() {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                     className="mb-12"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">Experience</h2>
-                    <div className="w-16 h-1 bg-accent rounded-full"></div>
+                    <span className="font-mono text-xs uppercase tracking-wider text-accent font-semibold block mb-2">Career Journey</span>
+                    <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-3">Work Experience</h2>
+                    <div className="w-16 h-1 bg-accent rounded-full mb-4"></div>
+                    <p className="text-text-muted text-base md:text-lg max-w-2xl">
+                        Engineering distributed systems, micro-frontends, and high-availability enterprise services.
+                    </p>
                 </motion.div>
 
                 <div className="relative border-l-2 border-[var(--app-timeline-line)] ml-4 md:ml-6 pl-8 md:pl-12 space-y-12">

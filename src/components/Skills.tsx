@@ -30,8 +30,12 @@ export default function Skills() {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                     className="mb-12"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">Skills</h2>
-                    <div className="w-16 h-1 bg-accent rounded-full"></div>
+                    <span className="font-mono text-xs uppercase tracking-wider text-accent font-semibold block mb-2">Technical Arsenal</span>
+                    <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-3">Skills &amp; Technologies</h2>
+                    <div className="w-16 h-1 bg-accent rounded-full mb-4"></div>
+                    <p className="text-text-muted text-base md:text-lg max-w-2xl">
+                        Core technologies, frameworks, and architectural patterns I leverage to build scalable systems.
+                    </p>
                 </motion.div>
 
                 <div className="space-y-10">

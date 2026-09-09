@@ -24,8 +24,12 @@ export default function Projects() {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                     className="mb-12"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">Projects</h2>
-                    <div className="w-16 h-1 bg-accent rounded-full"></div>
+                    <span className="font-mono text-xs uppercase tracking-wider text-accent font-semibold block mb-2">Featured Work</span>
+                    <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-3">Projects</h2>
+                    <div className="w-16 h-1 bg-accent rounded-full mb-4"></div>
+                    <p className="text-text-muted text-base md:text-lg max-w-2xl">
+                        Selected production applications, AI systems, and distributed platforms I've engineered.
+                    </p>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

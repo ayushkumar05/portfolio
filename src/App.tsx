@@ -15,11 +15,11 @@ function App() {
       <Navbar />
       <main className="relative z-10">
         <Hero />
-        <Education />
         <Experience />
         <Skills />
         <Projects />
         <AchievementsAndCourses />
+        <Education />
       </main>
       <Footer />
     </div>

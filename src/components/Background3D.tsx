@@ -95,9 +95,9 @@ export default function Background3D() {
       const timeS = time * 0.001;
 
       const isDark = document.documentElement.classList.contains('dark');
-      const color1 = isDark ? '102, 163, 191' : '50, 90, 130';    // lighter navy
-      const color2 = isDark ? '200, 223, 219' : '65, 115, 165';   // lighter blue
-      const linkColor = isDark ? '200, 223, 219' : '65, 115, 165'; // lighter links
+      const color1 = isDark ? '120, 175, 200' : '75, 115, 155';    // lightened navy / blue
+      const color2 = isDark ? '210, 230, 226' : '90, 138, 182';   // lightened soft cyan / blue
+      const linkColor = isDark ? '210, 230, 226' : '90, 138, 182'; // lightened connecting links
 
       const isMobile = w < 768;
       const helixCenters = isMobile ? [w * 0.5] : [w * 0.80, w * 0.18];
@@ -128,7 +128,7 @@ export default function Background3D() {
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
           ctx.lineTo(b.x, b.y);
-          ctx.strokeStyle = `rgba(${linkColor}, ${isDark ? 0.06 : 0.18})`;
+          ctx.strokeStyle = `rgba(${linkColor}, ${isDark ? 0.05 : 0.15})`;
           ctx.lineWidth = isDark ? 1 : 1.5;
           ctx.stroke();
         }
@@ -156,7 +156,7 @@ export default function Background3D() {
             ctx.quadraticCurveTo(prev.x, prev.y, cpx, cpy);
           }
           const strandColor = strand === 0 ? color1 : color2;
-          ctx.strokeStyle = `rgba(${strandColor}, ${isDark ? 0.15 : 0.25})`;
+          ctx.strokeStyle = `rgba(${strandColor}, ${isDark ? 0.13 : 0.22})`;
           ctx.lineWidth = isDark ? 1.5 : 2;
           ctx.stroke();
         }
@@ -168,7 +168,7 @@ export default function Background3D() {
         const color = p.strand === 0 ? color1 : color2;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${color}, ${isDark ? p.opacity : p.opacity * 1.4})`;
+        ctx.fillStyle = `rgba(${color}, ${isDark ? p.opacity * 0.9 : p.opacity * 1.25})`;
         ctx.fill();
       }
 
