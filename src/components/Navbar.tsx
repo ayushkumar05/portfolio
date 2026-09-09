@@ -39,9 +39,9 @@ export default function Navbar() {
     };
 
     const navLinks = [
-        { label: 'Projects', id: 'projects' },
-        { label: 'Skills', id: 'skills' },
         { label: 'Experience', id: 'experience' },
+        { label: 'Skills', id: 'skills' },
+        { label: 'Projects', id: 'projects' },
         { label: 'Education', id: 'education' },
     ];
 
