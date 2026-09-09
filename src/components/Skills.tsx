@@ -3,16 +3,20 @@ import ParticleField from './ParticleField';
 
 const skillsData = [
     {
-        category: "Backend",
-        items: ["Java", "Spring Boot", "Node.js", "Python", "PostgreSQL", "Oracle", "Redis", "Kafka"]
+        category: "Languages",
+        items: ["Python", "Java", "TypeScript", "JavaScript", "SQL", "C/C++", "Solidity"]
+    },
+    {
+        category: "Backend & Databases",
+        items: ["Spring Boot", "Node.js", "Flask", "Oracle", "PostgreSQL", "Redis", "Kafka"]
     },
     {
         category: "Frontend",
-        items: ["React", "TypeScript", "Tailwind", "WebRTC"]
+        items: ["React", "Redux", "Material-UI", "WebRTC", "Salt Design System"]
     },
     {
         category: "Architecture & Cloud",
-        items: ["Distributed Systems", "AWS (EKS, ECS)", "Docker", "Kubernetes", "CI/CD", "RAG/FAISS"]
+        items: ["Distributed Systems", "Microservices", "Event-Driven", "REST APIs", "AWS (EKS, ECS)", "Docker", "Kubernetes", "CI/CD"]
     }
 ];
 

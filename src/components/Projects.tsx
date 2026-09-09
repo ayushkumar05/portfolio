@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 const projectsData = [
     {
         title: "Journee",
-        description: "AI-powered trip planner using RAG/FAISS vector search to curate personalized travel itineraries.",
-        tags: ["React", "Flask", "FAISS", "RAG"]
+        description: "Architected an AI-powered trip planner translating natural language into multi-day itineraries using a RAG pipeline and FAISS-based vector search. Built scalable Flask REST APIs to serve React-driven workflows, generating constraint-aware travel recommendations.",
+        tags: ["React", "Flask", "FAISS", "RAG", "Python"]
     },
     {
         title: "HydroHive",
-        description: "Geospatial flood-risk analytics system using a terrain-aware XGBoost model for predictive mapping.",
-        tags: ["Python", "XGBoost", "Geospatial", "React"]
+        description: "Geospatial flood-risk analytics system integrating high-volume meteorological data and satellite imagery. Trained and deployed a terrain-aware XGBoost machine learning model with raster feature engineering for 72-hour automated risk forecasting.",
+        tags: ["Python", "XGBoost", "Geospatial", "Machine Learning"]
     }
 ];
 

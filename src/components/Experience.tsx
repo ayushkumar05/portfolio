@@ -2,23 +2,25 @@ import { motion } from 'framer-motion';
 
 const experiences = [
     {
-        role: "Regulatory Controls and Operational Risk Technology (RCORT)",
+        role: "Software Engineer I",
         company: "JPMorgan Chase & Co.",
-        date: "April 2026 – Present",
+        date: "Jul 2024 – Present",
         bullets: [
-            "Micro-frontend architecture and high-throughput backend systems",
-            "Handling 10K+ RPM with ETags and caching strategies",
-            "DevOps optimization enabling AWS EKS/ECS CI/CD convergence"
+            "Architected the consolidation of multiple legacy monoliths into a unified React/TypeScript micro-frontend platform, accelerating deployment cycles by 40%.",
+            "Designed high-throughput Java/Spring Boot REST APIs handling 10K+ RPM, implementing strict optimistic concurrency controls (ETags) to eliminate data collisions.",
+            "Implemented the Transactional Outbox pattern across Oracle database schemas, guaranteeing at-least-once event delivery for quarterly risk ingestion.",
+            "Modernized a React-based UI and improved WCAG accessibility compliance, increasing accessibility scores by 25% and CSAT from 75% to 93%.",
+            "Led the convergence of disparate AWS EKS and ECS deployment pipelines into a single CI/CD workflow, reducing production release times from days to under 3 hours.",
+            "Engineered an asynchronous, event-driven AI application utilizing a RAG pipeline to automate complex audit queries, saving ~3 weeks per quarter."
         ]
     },
     {
-        role: "CertifyNow & Enterprise Access",
+        role: "Software Engineering Intern",
         company: "JPMorgan Chase & Co.",
-        date: "July 2024 – April 2026",
+        date: "Jun 2023 – Jun 2024",
         bullets: [
-            "Frontend modernization using React/TypeScript meeting WCAG 2.1 AA standards",
-            "Developed AI automation pipelines using RAG/FAISS",
-            "Scaled backend via binary-search lookups resulting in a 90% runtime reduction"
+            "Built a scalable role-based access chatbot using sentence transformer embeddings, serving 50K+ concurrent users and reducing manual IT escalation tickets by 60%.",
+            "Developed a distributed financial instruments service to process 10K+ daily trades, introducing a Redis caching layer to offload database reads and meet a strict 99.9% availability SLA."
         ]
     }
 ];
