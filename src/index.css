@@ -18,33 +18,33 @@
 
 @layer base {
   :root {
-    --app-bg-primary: #ffffff;
-    --app-bg-secondary: #f0fdfa;
+    --app-bg-primary: #F2EFE7;
+    --app-bg-secondary: #C8DFDB;
     --app-bg-card: #ffffff;
-    --app-border: #ccfbf1;
-    --app-border-hover: #5eead4;
-    --app-text-primary: #0f172a;
-    --app-text-secondary: #475569;
-    --app-accent: #06b6d4;
-    --app-accent-light: #22d3ee;
-    --accent-glow: rgba(6, 182, 212, 0.15);
+    --app-border: #C8DFDB;
+    --app-border-hover: #66A3BF;
+    --app-text-primary: #1e293b; /* Using a dark slate for readable text */
+    --app-text-secondary: #3368A0; /* Using the dark blue for secondary text */
+    --app-accent: #3368A0;
+    --app-accent-light: #66A3BF;
+    --accent-glow: rgba(51, 104, 160, 0.15);
   }
 
   .dark {
-    --app-bg-primary: #0f172a;
-    --app-bg-secondary: #020617;
-    --app-bg-card: #1e293b;
-    --app-border: #334155;
-    --app-border-hover: #38bdf8;
-    --app-text-primary: #f8fafc;
-    --app-text-secondary: #94a3b8;
-    --app-accent: #38bdf8;
-    --app-accent-light: #7dd3fc;
-    --accent-glow: rgba(56, 189, 248, 0.15);
+    --app-bg-primary: #3368A0;
+    --app-bg-secondary: #2a5280; /* A darker shade of the blue for contrast */
+    --app-bg-card: #66A3BF;
+    --app-border: #66A3BF;
+    --app-border-hover: #C8DFDB;
+    --app-text-primary: #F2EFE7;
+    --app-text-secondary: #C8DFDB;
+    --app-accent: #C8DFDB;
+    --app-accent-light: #F2EFE7;
+    --accent-glow: rgba(200, 223, 219, 0.15);
   }
   
   html, body {
-    @apply bg-[var(--color-bg-primary)] text-[var(--color-text-primary)] font-sans antialiased transition-colors duration-300;
+    @apply bg-[var(--app-bg-primary)] text-[var(--app-text-primary)] font-sans antialiased transition-colors duration-300;
     scroll-behavior: smooth;
   }
 }
