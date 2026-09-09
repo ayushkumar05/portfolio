@@ -15,7 +15,7 @@ const educationData = [
 
 export default function Education() {
     return (
-        <section id="education" className="py-24 bg-bg-secondary/40 relative">
+        <section id="education" className="py-24 bg-bg-secondary relative transition-colors duration-300 backdrop-blur-[1px]">
             <div className="max-w-4xl mx-auto px-6">
                 <motion.div
                     initial={{ y: 20, opacity: 0 }}
@@ -36,11 +36,11 @@ export default function Education() {
                             whileInView={{ y: 0, opacity: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
-                            className="bg-bg-card/80 backdrop-blur-sm border border-border rounded-2xl p-6 md:p-8 shadow-sm"
+                            className="bg-bg-card border border-border rounded-2xl p-6 md:p-8 shadow-sm"
                         >
                             <span className="inline-block font-mono text-sm font-medium text-accent mb-2">{edu.date}</span>
                             <h3 className="text-xl font-semibold text-text-primary mb-1">{edu.degree}</h3>
-                            <h4 className="text-base text-text-secondary">{edu.institution}</h4>
+                            <h4 className="text-base text-text-muted">{edu.institution}</h4>
                         </motion.div>
                     ))}
                 </div>

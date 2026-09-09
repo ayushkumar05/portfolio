@@ -21,8 +21,7 @@ const skillsData = [
 
 export default function Skills() {
     return (
-        <section id="skills" className="py-24 bg-bg-secondary/40 relative overflow-hidden">
-
+        <section id="skills" className="py-24 bg-bg-secondary relative overflow-hidden transition-colors duration-300 backdrop-blur-[1px]">
             <div className="relative z-10 max-w-4xl mx-auto px-6">
                 <motion.div
                     initial={{ y: 20, opacity: 0 }}
@@ -51,7 +50,7 @@ export default function Skills() {
                                             delay: index * 0.03,
                                             ease: "backOut"
                                         }}
-                                        className="px-4 py-1.5 rounded-full border border-teal-200 bg-white text-sm font-medium text-slate-700 hover:border-accent hover:text-cyan-700 hover:shadow-[0_0_20px_var(--accent-glow)] transition-all duration-200 cursor-default"
+                                        className="px-4 py-1.5 rounded-full border border-border bg-bg-card text-sm font-medium text-text-primary hover:border-accent hover:text-accent hover:shadow-[0_0_20px_var(--accent-glow)] transition-all duration-200 cursor-default"
                                     >
                                         {skill}
                                     </motion.div>

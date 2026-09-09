@@ -15,7 +15,7 @@ const projectsData = [
 
 export default function Projects() {
     return (
-        <section id="projects" className="py-24 bg-bg-primary relative">
+        <section id="projects" className="py-24 relative transition-colors duration-300 backdrop-blur-[1px]">
             <div className="max-w-4xl mx-auto px-6">
                 <motion.div
                     initial={{ y: 20, opacity: 0 }}
@@ -37,7 +37,7 @@ export default function Projects() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
                             whileHover={{ y: -6 }}
-                            className="bg-bg-card/80 backdrop-blur-sm border border-border rounded-2xl p-8 hover:border-accent hover:shadow-lg hover:shadow-accent-glow transition-all duration-200 group flex flex-col h-full"
+                            className="bg-bg-card border border-border rounded-2xl p-8 hover:border-accent hover:shadow-lg hover:shadow-[var(--accent-glow)] transition-all duration-200 group flex flex-col h-full"
                         >
                             <h3 className="text-xl font-semibold text-text-primary mb-3">{project.title}</h3>
                             <p className="text-text-secondary text-sm md:text-base flex-grow mb-6">{project.description}</p>
@@ -45,7 +45,7 @@ export default function Projects() {
                                 {project.tags.map((tag, tagIndex) => (
                                     <span
                                         key={tagIndex}
-                                        className="bg-teal-50 text-cyan-700 text-xs px-2.5 py-1 rounded-full font-mono font-medium"
+                                        className="bg-[var(--app-tag-bg)] text-[var(--app-tag-text)] text-xs px-2.5 py-1 rounded-full font-mono font-medium"
                                     >
                                         {tag}
                                     </span>

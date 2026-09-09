@@ -10,10 +10,10 @@ import Background3D from './components/Background3D';
 
 function App() {
   return (
-    <div className="relative min-h-screen bg-bg-primary/90 text-text-primary selection:bg-accent-light selection:text-white transition-colors duration-300">
+    <div className="relative min-h-screen text-text-primary selection:bg-accent-light selection:text-white transition-colors duration-300">
       <Background3D />
       <Navbar />
-      <main className="relative z-10 backdrop-blur-[2px]">
+      <main className="relative z-10">
         <Hero />
         <Education />
         <Experience />

@@ -9,8 +9,10 @@
   --color-border-hover: var(--app-border-hover);
   --color-text-primary: var(--app-text-primary);
   --color-text-secondary: var(--app-text-secondary);
+  --color-text-muted: var(--app-text-muted);
   --color-accent: var(--app-accent);
   --color-accent-light: var(--app-accent-light);
+  --color-accent-contrast: var(--app-accent-contrast);
   
   --font-sans: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
@@ -19,28 +21,40 @@
 @layer base {
   :root {
     --app-bg-primary: #F2EFE7;
-    --app-bg-secondary: #C8DFDB;
-    --app-bg-card: #ffffff;
+    --app-bg-secondary: rgba(200, 223, 219, 0.35);
+    --app-bg-card: rgba(255, 255, 255, 0.85);
     --app-border: #C8DFDB;
     --app-border-hover: #66A3BF;
-    --app-text-primary: #1e293b; /* Using a dark slate for readable text */
-    --app-text-secondary: #3368A0; /* Using the dark blue for secondary text */
+    --app-text-primary: #1a2332;
+    --app-text-secondary: #4a5568;
+    --app-text-muted: #718096;
     --app-accent: #3368A0;
     --app-accent-light: #66A3BF;
-    --accent-glow: rgba(51, 104, 160, 0.15);
+    --app-accent-contrast: #ffffff;
+    --accent-glow: rgba(51, 104, 160, 0.12);
+    --app-tag-bg: rgba(200, 223, 219, 0.6);
+    --app-tag-text: #2a4a6b;
+    --app-timeline-line: #C8DFDB;
+    --app-timeline-dot-ring: #F2EFE7;
   }
 
   .dark {
-    --app-bg-primary: #3368A0;
-    --app-bg-secondary: #2a5280; /* A darker shade of the blue for contrast */
-    --app-bg-card: #66A3BF;
-    --app-border: #66A3BF;
-    --app-border-hover: #C8DFDB;
+    --app-bg-primary: #0b1120;
+    --app-bg-secondary: rgba(17, 24, 39, 0.5);
+    --app-bg-card: rgba(20, 30, 50, 0.85);
+    --app-border: #1e3050;
+    --app-border-hover: #66A3BF;
     --app-text-primary: #F2EFE7;
-    --app-text-secondary: #C8DFDB;
-    --app-accent: #C8DFDB;
-    --app-accent-light: #F2EFE7;
-    --accent-glow: rgba(200, 223, 219, 0.15);
+    --app-text-secondary: #d1d8e0;
+    --app-text-muted: #8a9bb5;
+    --app-accent: #66A3BF;
+    --app-accent-light: #8ec5d6;
+    --app-accent-contrast: #0b1120;
+    --accent-glow: rgba(102, 163, 191, 0.2);
+    --app-tag-bg: rgba(30, 48, 80, 0.8);
+    --app-tag-text: #C8DFDB;
+    --app-timeline-line: #1e3050;
+    --app-timeline-dot-ring: #0b1120;
   }
   
   html, body {
