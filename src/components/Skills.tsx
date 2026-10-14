@@ -2,20 +2,20 @@ import { motion } from 'framer-motion';
 
 const skillsData = [
     {
-        category: "Frontend Architecture",
-        items: ["React 18", "TypeScript", "Micro-frontends", "Zustand", "TanStack Query", "Tailwind CSS", "JavaScript"]
+        category: "Languages",
+        items: ["Python", "Java", "TypeScript", "JavaScript", "SQL", "Solidity"]
     },
     {
         category: "Backend & Distributed Systems",
-        items: ["Spring Boot", "Java", "Python", "Apache Kafka", "Redis", "PostgreSQL", "Flask", "REST APIs", "MongoDB"]
+        items: ["FastAPI", "Spring Boot", "Node.js", "Flask", "Microservices", "REST APIs", "Kafka"]
     },
     {
-        category: "AI Infrastructure & Search",
-        items: ["RAG Pipelines", "LangChain", "Vector Databases", "Semantic Search", "LLM Orchestration", "Python"]
+        category: "Databases & Caching",
+        items: ["PostgreSQL", "Oracle", "Redis", "SQLite", "Neo4j", "Vector Databases (FAISS, ChromaDB)"]
     },
     {
-        category: "Cloud, DevOps & Quality",
-        items: ["Docker", "Kubernetes", "AWS", "CI/CD", "GitHub Actions", "JUnit", "WebRTC"]
+        category: "Cloud & DevOps",
+        items: ["AWS (EKS, ECS, S3)", "Docker", "Kubernetes", "CI/CD", "Git"]
     }
 ];
 
@@ -31,10 +31,10 @@ export default function Skills() {
                     className="mb-12"
                 >
                     <span className="font-mono text-xs uppercase tracking-wider text-accent font-semibold block mb-2">Technical Arsenal</span>
-                    <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-3">Skills &amp; Technologies</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-3">Technical Skills</h2>
                     <div className="w-16 h-1 bg-accent rounded-full mb-4"></div>
                     <p className="text-text-muted text-base md:text-lg max-w-2xl">
-                        Core technologies, frameworks, and architectural patterns I leverage to build scalable systems.
+                        Core languages, frameworks, distributed architectures, and cloud infrastructure I leverage to build mission-critical systems.
                     </p>
                 </motion.div>
 

@@ -3,13 +3,17 @@ import { motion } from 'framer-motion';
 const projectsData = [
     {
         title: "Journee",
-        description: "Architected an AI-powered trip planner translating natural language into dynamic multi-day itineraries using a sophisticated RAG pipeline with FAISS-based vector search and OpenAI LLMs. Built scalable, asynchronous Flask REST APIs to serve complex React-driven workflows, generating context-aware travel recommendations while reducing latency by 40% through intelligent caching strategies.",
-        tags: ["React", "Flask", "FAISS", "RAG", "Python", "Redis"]
+        date: "03/2025",
+        subtitle: "Distributed AI Itinerary Synthesis Engine",
+        description: "Architected a distributed multi-day itinerary synthesis engine combining Neo4j graph traversals and FAISS dense vector search for sub-second retrievals. Engineered constraint-solving heuristics (budget, routing, time windows) with FastAPI REST APIs to serve React-driven workflows, generating constraint-aware travel recommendations that reduced manual user planning effort by 80%.",
+        tags: ["Python", "FastAPI", "Neo4j", "FAISS", "React", "Vector Search"]
     },
     {
         title: "HydroHive",
-        description: "Developed a comprehensive geospatial flood-risk analytics platform integrating high-volume meteorological datasets and multispectral satellite imagery. Trained and deployed a robust terrain-aware XGBoost machine learning pipeline with advanced raster feature engineering, achieving 92% accuracy in 72-hour automated risk forecasting via Dockerized microservices.",
-        tags: ["Python", "XGBoost", "Geospatial", "Docker", "Machine Learning"]
+        date: "05/2023",
+        subtitle: "Geospatial Inundation Analytics Pipeline",
+        description: "Engineered an automated real-time geospatial analytics pipeline ingesting satellite telemetry and hydrological sensor streams, predicting 72-hour flood inundation with 89% recall. Built distributed raster feature extraction pipelines using XGBoost on Survey of India datasets, improving prediction accuracy over baseline models by 15%.",
+        tags: ["Python", "PyTorch", "GeoPandas", "XGBoost", "Machine Learning"]
     }
 ];
 
@@ -28,7 +32,7 @@ export default function Projects() {
                     <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-3">Projects</h2>
                     <div className="w-16 h-1 bg-accent rounded-full mb-4"></div>
                     <p className="text-text-muted text-base md:text-lg max-w-2xl">
-                        Selected production applications, AI systems, and distributed platforms I've engineered.
+                        High-performance AI engines, distributed graph search, and machine learning pipelines I've designed and engineered.
                     </p>
                 </motion.div>
 
@@ -41,10 +45,22 @@ export default function Projects() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
                             whileHover={{ y: -6 }}
-                            className="bg-bg-card border border-border rounded-2xl p-8 hover:border-accent hover:shadow-lg hover:shadow-[var(--accent-glow)] transition-all duration-200 group flex flex-col h-full"
+                            className="bg-bg-card border border-border rounded-2xl p-6 sm:p-8 hover:border-accent hover:shadow-lg hover:shadow-[var(--accent-glow)] transition-all duration-200 group flex flex-col h-full"
                         >
-                            <h3 className="text-xl font-semibold text-text-primary mb-3">{project.title}</h3>
-                            <p className="text-text-secondary text-sm md:text-base flex-grow mb-6">{project.description}</p>
+                            <div className="flex items-center justify-between gap-2 mb-2">
+                                <h3 className="text-xl sm:text-2xl font-bold text-text-primary group-hover:text-accent transition-colors">
+                                    {project.title}
+                                </h3>
+                                <span className="font-mono text-xs font-semibold text-accent bg-accent/10 px-2.5 py-0.5 rounded-full border border-accent/20">
+                                    {project.date}
+                                </span>
+                            </div>
+                            <div className="text-xs sm:text-sm font-medium text-text-muted mb-4">
+                                {project.subtitle}
+                            </div>
+                            <p className="text-text-secondary text-sm md:text-base flex-grow mb-6 leading-relaxed">
+                                {project.description}
+                            </p>
                             <div className="flex flex-wrap gap-2 mt-auto">
                                 {project.tags.map((tag, tagIndex) => (
                                     <span

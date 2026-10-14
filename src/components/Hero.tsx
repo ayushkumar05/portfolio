@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Briefcase } from 'lucide-react';
+import { Mail, Briefcase, MapPin } from 'lucide-react';
 import GradientMesh from './GradientMesh';
 
 export default function Hero() {
@@ -12,10 +12,14 @@ export default function Hero() {
                     initial={{ y: 30, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                    className="mb-4 inline-block"
+                    className="mb-4 flex flex-wrap items-center justify-center gap-2"
                 >
                     <span className="font-mono text-xs sm:text-sm text-accent bg-accent/5 px-3 py-1 rounded-full border border-border">
                         &lt;software engineer /&gt;
+                    </span>
+                    <span className="inline-flex items-center gap-1 font-mono text-xs sm:text-sm text-text-secondary bg-bg-card/70 px-3 py-1 rounded-full border border-border">
+                        <MapPin size={13} className="text-accent" />
+                        Bengaluru, India
                     </span>
                 </motion.div>
 
@@ -32,9 +36,9 @@ export default function Hero() {
                     initial={{ y: 30, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                    className="text-lg sm:text-xl md:text-2xl font-semibold text-text-secondary mb-3 sm:mb-4 max-w-2xl mx-auto px-2"
+                    className="text-lg sm:text-xl md:text-2xl font-semibold text-text-secondary mb-3 sm:mb-4 max-w-3xl mx-auto px-2"
                 >
-                    Software Engineer | Distributed Systems &amp; Micro-frontends
+                    Software Engineer | Distributed Systems, Agentic AI &amp; Micro-frontends
                 </motion.h2>
 
                 <motion.p
@@ -43,7 +47,7 @@ export default function Hero() {
                     transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                     className="text-sm sm:text-base md:text-lg text-text-muted mb-8 sm:mb-10 max-w-2xl mx-auto px-2"
                 >
-                    Engineering high-performance distributed systems, scalable React/TypeScript micro-frontends, and intelligent AI-driven applications. Passionate about solving complex architectural challenges.
+                    Building enterprise agentic AI coding runtimes, scalable React/TypeScript micro-frontends, and high-throughput distributed systems at JPMorgan Chase &amp; Co.
                 </motion.p>
 
                 <motion.div
